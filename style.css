@@ -6,6 +6,22 @@
  * Stuff that can be edited.
  **/
 
-.factoid--title {
+#map-title{
+	width: 690px;
+	font-size: 1em;
+  	margin: .1em 0 .1em;
+}
 
+#map-title h1{
+	color: #a82328;
+	margin: .33em 0;
+}
+
+#map-title p{
+	margin-top: 0em;
+}
+
+
+.factoid--title {
+	color: #a82328;
 }
