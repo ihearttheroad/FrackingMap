@@ -2,6 +2,35 @@
   display: none;
 }
 
+#frack-map-wrapper {
+  position: relative;
+}
+
+#frack-overlay {
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  padding: 1em;
+  width: 400px;
+  height: 250px;
+  background: #FFF;
+  z-index: 100;
+}
+
+#frack-overlay.active {
+  display: block;
+}
+
+.frack-overlay--content {
+  height: 100%;
+  overflow: scroll;
+}
+
+#frack-map {
+  z-index: 50;
+}
+
 /***
  * Stuff that can be edited.
  **/

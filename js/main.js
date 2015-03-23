@@ -62,14 +62,16 @@ function drawStates(states) {
 function showFactoid(state) {
   var $factoid = $('#factoid--state-' + state);
   if ($factoid.length) {
-    $('#frack-overlay').html($factoid.html());
+    $('#frack-overlay').addClass('active');
+    $('.frack-overlay--content').html($factoid.html());
   } else {
     hideFactoid();
   }
 }
 
 function hideFactoid() {
-  $('#frack-overlay').empty();
+  $('#frack-overlay').removeClass('active');
+  $('.frack-overlay--content').empty();
 }
 
 function zoomIn(d, svgElement) {
