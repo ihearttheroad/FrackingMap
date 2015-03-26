@@ -10,11 +10,11 @@
   display: none;
   position: absolute;
   top: 1em;
-  left: 0;
+  left: 1em;
   padding: 1em;
-  width: 400px;
-  height: 250px;
-  background: #FFF;
+  width: 230px;
+  height: 282px;
+  background: rgba(255,255,255,0.85);
   z-index: 100;
 }
 
@@ -53,4 +53,5 @@
 
 .factoid--title {
 	color: #a82328;
+  margin-top: 0;
 }
