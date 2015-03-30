@@ -22,6 +22,13 @@
   display: block;
 }
 
+.frack-overlay--close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-weight: bold;
+}
+
 .frack-overlay--content {
   height: 100%;
   overflow: scroll;
@@ -50,8 +57,17 @@
 	margin-top: 0em;
 }
 
-
 .factoid--title {
 	color: #a82328;
   margin-top: 0;
+}
+
+.factoid--icons {
+  display: flex;
+  justify-content: center;
+}
+
+.factoid--icons img {
+  height: 40px;
+  margin: 0 12px;
 }

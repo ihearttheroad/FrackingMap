@@ -26,6 +26,11 @@ d3.json("json/us-states.geojson", function(error, geoData) {
   drawStates(geoData);
 });
 
+$(".frack-overlay--close").click(function() {
+  hideFactoid();
+  zoomOut();
+});
+
 function drawStates(states) {
   g.selectAll(".map--state")
     .data(states.features)
