@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.map--state {
+  cursor: pointer;
+}
+
 #frack-overlay {
   display: none;
   position: absolute;
@@ -27,6 +31,7 @@
   top: 1em;
   right: 1em;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .frack-overlay--content {
