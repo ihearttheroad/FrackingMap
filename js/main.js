@@ -44,7 +44,8 @@ function drawStates(states) {
         var frackData = $('#factoid--state-' + d.properties.postal).data('frackStatus');
 
         if (frackData && frackData == 'exist') {
-          return stateColors.exist[Math.floor(Math.random() * 3)];
+          //return stateColors.exist[Math.floor(Math.random() * 3)];
+          return stateColors.exist[1];
         }
         if (frackData) {
           return stateColors[frackData];
