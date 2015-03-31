@@ -82,3 +82,38 @@
   height: 40px;
   margin: 0 12px;
 }
+
+#map-legend {
+  width: 690px;
+}
+
+.map-legend-content {
+  display: flex;
+  justify-content: center;
+}
+
+.map-legend-content img {
+  height: 16px;
+}
+
+.map-legend-icons {
+  display: inline-block;
+    margin: 0 20px;
+}
+
+.map-legend-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.map-legend-exists .map-legend-icon {
+  background-color: #3b6e9e;
+}
+
+.map-legend-proposed .map-legend-icon {
+  background-color: #e3ac1e;
+}
+
+.map-legend-notapplicable .map-legend-icon {
+  background-color: #dddddd
+}
