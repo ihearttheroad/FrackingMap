@@ -4,10 +4,16 @@
 
 #frack-map-wrapper {
   position: relative;
+  background: #FFF;
 }
 
 .map--state {
   cursor: pointer;
+}
+
+.map--state.active {
+  fill-opacity: 0.5;
+  /*fill: #F00;*/
 }
 
 #frack-overlay {

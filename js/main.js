@@ -81,8 +81,9 @@ function hideFactoid() {
 
 function zoomIn(d, svgElement) {
   zoomed = true;
+  d3.select('.map--state.active').classed("active", false);
   active = d3.select(svgElement);
-  active.classed("active", false);
+  active.classed("active", true);
 
   var bounds = path.bounds(d),
     dx = bounds[1][0] - bounds[0][0],
