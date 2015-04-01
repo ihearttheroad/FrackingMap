@@ -31,6 +31,9 @@ $(".frack-overlay--close").click(function() {
   zoomOut();
 });
 
+$('#map-legend-colors').show();
+$('#map-legend-detail').hide();
+
 function drawStates(states) {
   g.selectAll(".map--state")
     .data(states.features)
@@ -68,6 +71,8 @@ function drawStates(states) {
 function showFactoid(state) {
   var $factoid = $('#factoid--state-' + state);
   if ($factoid.length) {
+    $('#map-legend-colors').hide();
+    $('#map-legend-detail').show();
     $('#frack-overlay').addClass('active');
     $('.frack-overlay--content').html($factoid.html());
   } else {
@@ -76,6 +81,8 @@ function showFactoid(state) {
 }
 
 function hideFactoid() {
+  $('#map-legend-colors').show();
+  $('#map-legend-detail').hide();
   $('#frack-overlay').removeClass('active');
   $('.frack-overlay--content').empty();
 }
