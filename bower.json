@@ -18,6 +18,7 @@
     "jquery": "~2.1.1",
     "modernizr": "~2.8.3",
     "topojson": "~1.6.18",
-    "argjs": "~1.1.0"
+    "argjs": "~1.1.0",
+    "textures": "*"
   }
 }

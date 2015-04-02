@@ -5,17 +5,29 @@ var width = 690,
 
 var stateColors = {
   "default": "#DDD",
-  "proposed": "#e3ac1e",
-  "exist": [
+  "frack-rules-expected": "#e3ac1e",
+  "frack-with-rules": [
     "#315c85",
     "#3b6e9e",
     "#4480b8"
-  ]
+  ],
+  "no-frack-rules-expected": undefined,
+  "no-frack-with-rules": undefined
 };
 
 var svg = d3.select("#frack-map").append("svg")
   .attr("width", width)
   .attr("height", height);
+
+var noFrackWithRulesTexture = textures.lines().thicker().stroke(stateColors["frack-with-rules"][1]).background(stateColors.default);
+var noFrackRulesExpectedTexture = textures.lines().thicker().stroke(stateColors["frack-rules-expected"]).background(stateColors.default);
+
+svg.call(noFrackWithRulesTexture);
+svg.call(noFrackRulesExpectedTexture);
+
+stateColors["no-frack-rules-expected"] = noFrackRulesExpectedTexture.url();
+stateColors["no-frack-with-rules"] = noFrackWithRulesTexture.url();
+
 
 var g = svg.append("g");
 
@@ -46,9 +58,11 @@ function drawStates(states) {
       "fill": function(d, i) {
         var frackData = $('#factoid--state-' + d.properties.postal).data('frackStatus');
 
-        if (frackData && frackData == 'exist') {
-          //return stateColors.exist[Math.floor(Math.random() * 3)];
-          return stateColors.exist[1];
+        //return texture.url();
+
+        if (frackData && frackData == "frack-with-rules") {
+          //return stateColors.frack-with-rules[Math.floor(Math.random() * 3)];
+          return stateColors["frack-with-rules"][1];
         }
         if (frackData) {
           return stateColors[frackData];
