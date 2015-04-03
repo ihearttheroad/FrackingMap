@@ -113,7 +113,7 @@ function zoomIn(d, svgElement) {
     x = (bounds[0][0] + bounds[1][0]) / 2,
     y = (bounds[0][1] + bounds[1][1]) / 2,
     scale = 0.8 / Math.max(dx / width, dy / height),
-    translate = [(width / 2 - scale * x) + 80, height / 2 - scale * y];
+    translate = [(width / 2 - scale * x) + 175, height / 2 - scale * y];
 
   g.transition()
     .duration(750)

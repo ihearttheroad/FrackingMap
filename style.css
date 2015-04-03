@@ -5,6 +5,17 @@
 #frack-map-wrapper {
   position: relative;
   background: #FFF;
+  width: 690px;
+}
+
+#cen-logo {
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+}
+
+#cen-logo img {
+  width: 60px;
 }
 
 .map--state {
@@ -22,7 +33,7 @@
   top: 1em;
   left: 1em;
   padding: 1em;
-  width: 230px;
+  width: 300px;
   height: 282px;
   background: rgba(255,255,255,0.85);
   z-index: 100;
