@@ -18,6 +18,11 @@
   width: 60px;
 }
 
+#frack-map-credit {
+  position: absolute;
+  font-size: 10px;
+}
+
 .map--state {
   cursor: pointer;
 }
@@ -137,4 +142,8 @@
 
 .map-legend-notapplicable .map-legend-icon {
   background-color: #dddddd
+}
+
+#map-footer {
+  width: 690px;
 }
