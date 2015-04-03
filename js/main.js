@@ -88,7 +88,8 @@ function showFactoid(state) {
     $('#map-legend-colors').hide();
     $('#map-legend-detail').show();
     $('#frack-overlay').addClass('active');
-    $('.frack-overlay--content').html($factoid.html());
+    $('.frack-overlay--title').html($factoid.find('.factoid--title').html());
+    $('.frack-overlay--content').html($factoid.find('.factoid--content').html());
   } else {
     hideFactoid();
   }

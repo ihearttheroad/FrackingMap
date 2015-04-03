@@ -52,8 +52,8 @@
 }
 
 .frack-overlay--content {
-  height: 100%;
-  overflow: scroll;
+  height: 82%;
+  overflow: auto;
 }
 
 #frack-map {
@@ -67,7 +67,7 @@
 #map-title{
 	width: 690px;
 	font-size: 1em;
-  	margin: .1em 0 .1em;
+  margin: .1em 0 .1em;
 }
 
 #map-title h1{
@@ -79,7 +79,7 @@
 	margin-top: 0em;
 }
 
-.factoid--title {
+.frack-overlay--title {
 	color: #a82328;
   margin-top: 0;
 }
