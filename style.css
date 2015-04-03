@@ -108,6 +108,7 @@
 .map-legend-content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .map-legend-content img {
