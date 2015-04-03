@@ -60,6 +60,12 @@
   z-index: 50;
 }
 
+.map--state-label {
+  alignment-baseline: middle;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
 /***
  * Stuff that can be edited.
  **/

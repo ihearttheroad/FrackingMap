@@ -80,6 +80,20 @@ function drawStates(states) {
         hideFactoid();
       }
     });
+
+  g.selectAll('.map--state-label')
+    .data(states.features)
+    .enter().append("text")
+    .attr({
+      class: "map--state-label",
+      x: function(d) {return path.centroid(d)[0];},
+      y: function(d) {return path.centroid(d)[1];}
+    })
+    .style({
+      "font-size": "9px"
+    })
+    .text(function(d) { return d.properties.abbrev; });
+
 }
 
 function showFactoid(state) {
@@ -120,6 +134,11 @@ function zoomIn(d, svgElement) {
     .duration(750)
     .style("stroke-width", 2 / scale + "px")
     .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+
+  g.selectAll('.map--state-label')
+    .transition()
+    .duration(750)
+    .style("font-size", function() {return (scale > 3) ? "3px" : "5px";});
 }
 
 function zoomOut() {
@@ -133,4 +152,9 @@ function zoomOut() {
     .duration(750)
     .style("stroke-width", "1px")
     .attr("transform", "");
+
+  g.selectAll('.map--state-label')
+    .transition()
+    .duration(750)
+    .style("font-size", "9px");
 }
