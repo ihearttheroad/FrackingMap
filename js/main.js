@@ -86,14 +86,51 @@ function drawStates(states) {
     .enter().append("text")
     .attr({
       class: "map--state-label",
-      x: function(d) {return path.centroid(d)[0];},
-      y: function(d) {return path.centroid(d)[1];}
+      x: function(d) {return labelPlacement(d)[0];},
+      y: function(d) {return labelPlacement(d)[1];}
     })
     .style({
       "font-size": "9px"
     })
     .text(function(d) { return d.properties.postal; });
 
+}
+
+function labelPlacement(d) {
+  var centroid = path.centroid(d);
+
+  switch (d.properties.postal) {
+    case "MI":
+      centroid[0] += 5;
+      centroid[1] += 15;
+      break;
+    case "FL":
+      centroid[0] += 8;
+      break;
+    case "LA":
+      centroid[0] -= 6;
+      break;
+    case "DC":
+      centroid[1] += 5;
+      break;
+    case "MD":
+      centroid[1] -= 3;
+      break;
+    case "DE":
+      centroid[0] += 4;
+      break;
+    case "VT":
+      centroid[1] -= 3;
+      break;
+    case "NH":
+      centroid[1] += 4;
+      break;
+    case "RI":
+      centroid[0] += 5;
+      centroid[1] += 3;
+  }
+
+  return centroid;
 }
 
 function showFactoid(state) {
