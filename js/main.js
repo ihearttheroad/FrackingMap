@@ -92,7 +92,7 @@ function drawStates(states) {
     .style({
       "font-size": "9px"
     })
-    .text(function(d) { return d.properties.abbrev; });
+    .text(function(d) { return d.properties.postal; });
 
 }
 
