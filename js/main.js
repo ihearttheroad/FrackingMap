@@ -92,7 +92,7 @@ function drawStates(states) {
     .style({
       "font-size": "9px"
     })
-    .text(function(d) { return d.properties.postal; });
+    .text(function(d) { return (d.properties.postal != "DC") ? d.properties.postal : "";});
 
 }
 
@@ -128,6 +128,7 @@ function labelPlacement(d) {
     case "RI":
       centroid[0] += 5;
       centroid[1] += 3;
+      break;
   }
 
   return centroid;
