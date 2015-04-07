@@ -97,7 +97,7 @@
 
 .factoid--icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .factoid--icons img {
