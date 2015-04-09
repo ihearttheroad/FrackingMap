@@ -1,3 +1,12 @@
+a {
+  color: #006699; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #state-factoids {
   display: none;
 }
