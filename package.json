@@ -1,5 +1,5 @@
 {
-  "name": "honda",
+  "name": "frackingmap",
   "version": "1.0.0",
   "description": "To generate TopoJSON...",
   "main": "index.js",
@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:phase2tech/bonnier-honda.git"
   },
   "author": "",
   "license": "ISC",
